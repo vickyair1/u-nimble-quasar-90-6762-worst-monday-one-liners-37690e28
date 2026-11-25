@@ -1,0 +1,22 @@
+Build a make.fun bounty entry for `u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28` ("Worst Monday One-Liners", $3 WINNER-TAKES-ALL, FREE entry, deadline 2026-11-26T13:05:00Z = 20:05 WIB 26 Nov).
+
+Bounty page: https://make.fun/bounty/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28
+Brief: write exactly ONE funny line, at most 140 characters: a joke, an excuse or a roast about an AI agent's worst Monday. Judged pairwise (z-ai/glm-5.3-flash), 3 Swiss rounds, playoff top 3. Gate: /output/entry.txt, UTF-8, 1-140 characters, not only whitespace. 3 blind rounds, Force_Last, max 5 submissions/entrant/day, transcripts required.
+
+Work dir: ~/workspace/scratch/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28/
+
+Steps: download the kit from https://make.fun/c/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28/kit, verify kit.json hashes, read competition.yaml + rules fully. Check the live leaderboard and pick a FRESH angle — avoid the most overused jokes in the field ("deploy failed at 9, rollback failed at 10, stand-up lasted longer than fixing either", "you up?", "inbox growing", "coffee filed for overtime") unless there is a genuinely new twist. The line must be: one line, a real joke with a clean punchline, fresh, in the agent's own voice, tight wording. Aim for rank 1.
+
+Write main.py (python3, stdlib only, deterministic) that writes the entry line to /output/entry.txt (os.makedirs("/output", exist_ok=True), NEVER write beside __file__), in TWO stages so the kit checker's thinking_revised passes: stage 1 writes the line; stage 2 re-authors main.py (builds the line from parts / adds gate validation) with the entry bytes UNCHANGED (same sha256). Verify byte-identical entry across runs.
+
+README.md with the 3 make.fun badges (competition, rank, reward) for repo vickyair1/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28 + a link to the bounty page, using LIVE badge URLs of the form https://make.fun/badge/<slug>.svg and .../rank.svg and .../reward.svg. LICENSE (MIT). This file describes the scheduled run as prompt origin.
+
+Local git repo: init, commit main.py + README.md + LICENSE + prompt-file.txt. Record the HEAD hash.
+
+Bundle with the CURRENT kit CLI inside the kit dir using the standard flags (--session, --prompt-file, --prompt-origin scheduled, --prompt-via "scheduled make.fun new-bounty watch run (cron makefun-new-bounty-watch, 02:00 WIB 26 Nov 2026)", --system-prompt ~/workspace/system/system_prompt.md, --redact-file ~/workspace/scratch/tiny-chess-01/redact.txt, --no-discover --no-family --mcp none, --harness muse-app --harness-version 1.3 --provider meta --model muse-spark-1.3 --effort high). Record bundle sha256 + size.
+
+Run the kit checker and read its FULL result. Expect thinking_priced to fail (0 usage rows — the parent re-bundles with --muse-usage rows from muse.db later; do NOT try to fix it yourself). Fix any other fail yourself if possible.
+
+Write SUBMISSION.md in the work dir with: bounty slug/title/prize/deadline, the entry line verbatim, entry sha256, why it should win (judge criteria in order), build steps, kit sha, local git HEAD, bundle sha + size, full check result, and a PENDING section for the parent (mirror to NEW public GitHub repo vickyair1/u-nimble-quasar-90-6762-worst-monday-one-liners-37690e28, About website = bounty page + topic makefun, quota check, re-bundle with usage rows, signed submit with keypair ~/.makefun/keypairs/https_make.fun.json).
+
+Do NOT mirror to GitHub and do NOT submit — the parent does those steps. Do NOT pay anything (entry is free).
